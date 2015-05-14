@@ -11,12 +11,16 @@ import javax.persistence.Table;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
- 
+
 import org.hibernate.annotations.Type;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.joda.time.LocalDate;
 import org.springframework.format.annotation.DateTimeFormat;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
  
+
+@JsonIgnoreProperties(ignoreUnknown=true)
 @Entity
 @Table(name="EMPLOYEE")
 public class Employee {
